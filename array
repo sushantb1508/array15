@@ -1,0 +1,15 @@
+def twonumbersum(arr,target):
+    num={}
+    for i in arr:
+        checknum = target-i
+        if checknum in num:
+            return[checknum,i]
+        else:
+            num[i]=True
+    
+    return -1
+if __name__=='__main__':
+    arr = [3,5,-4,8,11,1,-1,6]
+    target=13
+    ans=twonumbersum(arr,target)
+    print(ans)
